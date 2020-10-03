@@ -9,23 +9,23 @@ import FoodDetailPage from "./pages/FoodDetail";
 import "./App.css";
 
 function App() {
-  const history = useHistory();
+  // const history = useHistory();
 
-  const handleClickFood = () => {
-    history.push(PageRoute.Index);
-  };
+  // const handleClickFood = () => {
+  //   history.push(PageRoute.Index);
+  // };
 
-  const handleClickSleep = () => {
-    history.push(PageRoute.Sleep);
-  };
+  // const handleClickSleep = () => {
+  //   history.push(PageRoute.Sleep);
+  // };
 
-  const handleClickAccount = () => {
-    history.push(PageRoute.Account);
-  };
+  // const handleClickAccount = () => {
+  //   history.push(PageRoute.Account);
+  // };
 
-  const handleClickFoodDetail = () => {
-    history.push(PageRoute.FoodDetail);
-  };
+  // const handleClickFoodDetail = () => {
+  //   history.push(PageRoute.FoodDetail);
+  // };
 
   return (
     <div className="App">
