@@ -1,0 +1,35 @@
+.container {
+}
+
+.title {
+  font-size: 32px;
+  color: #596de4;
+  text-align: left;
+  padding-left: 28px;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #596de4;
+  text-align: left;
+  padding-left: 28px;
+}
+
+.recommendation {
+  position: relative;
+  height: 200px;
+}
+
+.Image {
+  width: 230px;
+  height: 150px;
+  background-size: cover;
+  background-position: center center;
+  margin-inline-start: 40px;
+}
+
+.eatButton {
+  position: absolute;
+  right: 32px;
+  top: 120px;
+}
