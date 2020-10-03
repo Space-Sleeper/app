@@ -1,0 +1,58 @@
+.container {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.score {
+	display: flex;
+	width: 210px !important;
+	height: 210px;
+	margin: 0 auto 100px auto;
+}
+
+.scoreValue{
+	font-size: 130px !important;
+	margin: auto auto !important;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Lato';
+	color: #566DE5;
+}
+
+.dataWrapper,
+.aveWrapper,
+.diffWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+	padding: 0 30px;
+}
+
+.diffArrow {
+	color: #ff0000;
+}
+.diffLabel {
+}
+
+.diffValue {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.aveLabel {
+
+}
+
+.aveValue {
+
+}
+
+.data {
+
+}
+
+.button {
+
+}
