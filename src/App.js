@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 import { PageRoute } from "./route";
 import HomePage from "./pages/Home";
@@ -18,9 +18,16 @@ import "./App.css";
 
 function App() {
   const history = useHistory();
+  const bodyRef = useRef();
 
   useEffect(() => {
     overrideThemeVariables(Theme);
+  }, []);
+
+  useLayoutEffect(() => {
+    if (window.innerHeight - 60 < bodyRef.current.clientHeight) {
+      bodyRef.current.style.paddingBottom = "100px";
+    }
   }, []);
 
   const handleClickFood = () => {
@@ -50,7 +57,7 @@ function App() {
   ];
 
   return (
-    <div className="App">
+    <div className="App" ref={bodyRef}>
       <div>
         <Switch>
           <Route exact path={PageRoute.Index}>
@@ -68,7 +75,7 @@ function App() {
         </Switch>
         <Footer ToolBarDatas={ToolBarDatas} />
       </div>
-  </div>
+    </div>
   );
 }
 

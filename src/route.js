@@ -3,4 +3,5 @@ export const PageRoute = {
   Sleep: "/sleep",
   FoodDetail: "/food-detail",
   Account: "/account",
+  Foods: "/foods/:id",
 };
