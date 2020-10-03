@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, useHistory } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { PageRoute } from "./route";
 import HomePage from "./pages/Home";
 import SleepPage from "./pages/Sleep";
