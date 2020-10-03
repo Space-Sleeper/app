@@ -1,0 +1,25 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: calc(100% - 32px);
+  margin: auto auto 20px auto;
+}
+
+.icon {
+  --btn-height: 80px;
+  width: 60px;
+  height: 60px;
+}
+
+.iconContainer[data-isactive="true"] path {
+  fill: #566de5;
+}
+
+.icon button {
+  width: 100%;
+}
