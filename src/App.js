@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   useLayoutEffect(() => {
-    if (window.innerHeight < bodyRef.current.clientHeight) {
+    if (window.innerHeight - 60 < bodyRef.current.clientHeight) {
       bodyRef.current.style.paddingBottom = "100px";
     }
   }, []);

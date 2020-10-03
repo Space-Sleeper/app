@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import ImageCurry from "../assets/curry.jpg";
 import Margin from "../components/margin";
 import FoodCard from "../components/foodCard";
-import { Button } from "ui-neumorphism";
+import { Button, Dialog, Card } from "ui-neumorphism";
 import { foodList } from "../dummy";
 
 import Styles from "./Home.module.css";
 
 export default function HomePage() {
+  const [isDialogVisible, setIsDialogVisible] = useState(false);
+
   const data = foodList;
   data.length = 2;
+
+  const handleOpenDialog = () => {
+    setIsDialogVisible(true);
+  };
+
+  const handleCloseDialog = () => {
+    setIsDialogVisible(false);
+  };
 
   return (
     <div className={Styles.container}>
@@ -34,6 +44,7 @@ export default function HomePage() {
               "--btn-height": "44px",
               fontWeight: 600,
             }}
+            onClick={handleOpenDialog}
             rounded
           >
             Eat
@@ -67,6 +78,23 @@ export default function HomePage() {
           </Button>
         </div>
       </section>
+      <Dialog visible={isDialogVisible} onClose={handleCloseDialog}>
+        <Card minWidth={300} style={{ padding: "60px 24px" }}>
+          <p className={Styles.dialogTitle}>
+            Record what you eat.
+            <br /> Is it okay?
+          </p>
+          <Margin height={160} />
+          <div className={Styles.dialogButtons}>
+            <Button onClick={handleCloseDialog} color="var(--error)" rounded>
+              No
+            </Button>
+            <Button onClick={handleCloseDialog} color="var(--primary)" rounded>
+              Sure
+            </Button>
+          </div>
+        </Card>
+      </Dialog>
     </div>
   );
 }

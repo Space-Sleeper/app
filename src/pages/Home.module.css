@@ -41,3 +41,20 @@
 .moreButton {
   text-align: right;
 }
+
+.dialogTitle {
+  text-align: center;
+  color: #d62525;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dialogButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.dialogButton {
+  margin: 4px 12px;
+}
