@@ -68,7 +68,7 @@ function App() {
         </Switch>
         <Footer ToolBarDatas={ToolBarDatas} />
       </div>
-    </div>
+  </div>
   );
 }
 
