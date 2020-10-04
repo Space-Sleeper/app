@@ -3,7 +3,7 @@ import Imagekakinotane from "./assets/kakinotane.jpg";
 export const foodList = [
   {
     imgUrl: Imagekakinotane,
-    name: "kakinotane",
+    name: "aaaaaaaaaaaaaaa",
     id: 2,
     nutorition: { calorie: 1200, vitaminD: 19 },
     description: "honnto ni oishii kara tabete!!",
