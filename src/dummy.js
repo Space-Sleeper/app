@@ -7,7 +7,7 @@ export const foodList = [
     name: "日清スペースチキンラーメン",
     description:  "お湯を注入して食べる",
     contents: "35.7g（1包当り）（麺6.3ｇ×3個）",
-    nutorition: { calorie: { calorie: 153, vidaminD: 20 },
+    nutorition: { calorie: 153, vidaminD: 20 },
     maker:  "日清食品ホールディングス株式会社",
     stocked: 20,
   },
