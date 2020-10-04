@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 import { PageRoute } from "./route";
 import HomePage from "./pages/Home";
@@ -10,6 +10,7 @@ import { overrideThemeVariables } from "ui-neumorphism";
 import "ui-neumorphism/dist/index.css";
 import Theme from "./theme";
 import { foodList } from "./dummy";
+import { calcCalorie } from "./utils";
 
 import IconAccount from "./assets/account-icon.svg";
 import IconDish from "./assets/dish-icon.svg";
@@ -17,33 +18,58 @@ import IconBed from "./assets/bed-icon.svg";
 
 import "./App.css";
 
-const alreadyTakenCalorie = 1000;
-const canTakeCarorie = 2900;
-
-function recommendation({ alreadyTakenCalorie, canTakeCarorie }) {
-  const restCalories = canTakeCarorie - alreadyTakenCalorie;
-
-  const canEat = foodList.filter(
-    ({ nutorition }) => nutorition.calorie < restCalories
-  );
-
-  function sortFunction(a, b) {
-    if (a.nutorition.vitaminD > b.nutorition.vitaminD) return -1;
-    if (a.nutorition.vitaminD < b.nutorition.vitaminD) return 1;
-    return 0;
-  }
-
-  return { ok: canEat.length > 0, data: canEat.sort(sortFunction)[0] };
-}
-
-console.log(recommendation({ alreadyTakenCalorie, canTakeCarorie }));
-
 function App() {
   const history = useHistory();
   const bodyRef = useRef();
+  const [canTakeCalorie, setCanTakeCalorie] = useState(0);
 
   useEffect(() => {
     overrideThemeVariables(Theme);
+
+    const foodListJson = localStorage.getItem("foodList");
+    if (!foodListJson) {
+      localStorage.setItem("foodList", JSON.stringify(foodList));
+    }
+
+    const alreadyTakenCalorieJson = localStorage.getItem("alreadyTakenCalorie");
+    if (!alreadyTakenCalorieJson) {
+      localStorage.setItem(
+        "alreadyTakenCalorie",
+        JSON.stringify({
+          calorie: 0,
+          date: new Date(),
+          count: 0,
+        })
+      );
+    } else {
+      const alreadyTakenCalorie = JSON.stringify(alreadyTakenCalorieJson);
+
+      const now = new Date();
+      const last = new Date(alreadyTakenCalorie.date);
+      if (
+        now.getFullYear() === last.getFullYear() &&
+        now.getMonth() === last.getMonth() &&
+        now.getDate() === last.getDate()
+      ) {
+        console.log("ok");
+      } else {
+        localStorage.setItem(
+          "alreadyTakenCalorie",
+          JSON.stringify({
+            calorie: 0,
+            date: new Date(),
+            count: 0,
+          })
+        );
+      }
+    }
+
+    const age = localStorage.getItem("age");
+    const height = localStorage.getItem("height");
+    const weight = localStorage.getItem("weight");
+
+    setCanTakeCalorie(calcCalorie({ weight, height, age }));
+    console.log(calcCalorie({ weight, height, age }));
   }, []);
 
   useLayoutEffect(() => {
@@ -83,7 +109,7 @@ function App() {
       <div>
         <Switch>
           <Route exact path={PageRoute.Index}>
-            <HomePage />
+            <HomePage canTakeCalorie={canTakeCalorie} />
           </Route>
           <Route exact path={PageRoute.Sleep}>
             <SleepPage />
