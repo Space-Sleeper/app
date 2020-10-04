@@ -23,7 +23,7 @@ export default function FoodDetailPage() {
       <h1 className={Styles.name}>{data.name}</h1>
       <Margin height={40} />
       <div className={Styles.imgWrapper}>
-        <img src={data.imgUrl} alt="image" className={Styles.image} />
+        <img src={data.imgUrl} alt="food-image" className={Styles.image} />
       </div>
       <Margin height={40} />
       <section>
