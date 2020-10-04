@@ -22,10 +22,12 @@ const canTakeCarorie = 2900;
 
 function recommendation({ alreadyTakenCalorie, canTakeCarorie }) {
   const restCalories = canTakeCarorie - alreadyTakenCalorie;
+  const ateJson = localStorage.getItem("ate");
+  const ate = JSON.stringify(ateJson);
 
-  const canEat = foodList.filter(
-    ({ nutorition }) => nutorition.calorie < restCalories
-  );
+  const canEat = foodList
+    .filter(({ nutorition }) => nutorition.calorie < restCalories)
+    .filter(({ id }) => ate.id === id);
 
   function sortFunction(a, b) {
     if (a.nutorition.vitaminD > b.nutorition.vitaminD) return -1;
