@@ -3,14 +3,14 @@ import ImageCurry from "../assets/curry.jpg";
 import Margin from "../components/margin";
 import FoodCard from "../components/foodCard";
 import { Button, Dialog, Card } from "ui-neumorphism";
-import { foodList } from "../dummy";
+import { foodList as initFoodList } from "../dummy";
 
 import Styles from "./Home.module.css";
 
 export default function HomePage() {
   const [isDialogVisible, setIsDialogVisible] = useState(false);
 
-  const data = foodList;
+  const data = initFoodList;
   data.length = 2;
 
   const handleOpenDialog = () => {
@@ -19,6 +19,32 @@ export default function HomePage() {
 
   const handleCloseDialog = () => {
     setIsDialogVisible(false);
+  };
+
+  const handleClickEat = (id) => {
+    const foodListJson = localStorage.getItem("foodList");
+    if (!foodListJson) {
+      localStorage.setItem("foodList", JSON.stringify(initFoodList));
+    }
+    const foodList = JSON.stringify(foodListJson);
+
+    const newFoodList = foodList.map((food) => {
+      if (food.id === id) {
+        food.stocked -= 1;
+        const alreadyTakenCalorieJson = localStorage.getItem(
+          "alreadyTakenCalorie"
+        );
+        const alreadyTakenCalorie = JSON.parse(alreadyTakenCalorieJson);
+        alreadyTakenCalorie.calorie += food.calorie;
+        alreadyTakenCalorie.count += 1;
+
+        localStorage.setItem("foodList", JSON.stringify(alreadyTakenCalorie));
+      }
+      return food;
+    });
+
+    localStorage.setItem("foodList", JSON.stringify(newFoodList));
+    handleCloseDialog();
   };
 
   return (
@@ -89,7 +115,7 @@ export default function HomePage() {
             <Button onClick={handleCloseDialog} color="var(--error)" rounded>
               No
             </Button>
-            <Button onClick={handleCloseDialog} color="var(--primary)" rounded>
+            <Button onClick={handleClickEat} color="var(--primary)" rounded>
               Sure
             </Button>
           </div>
