@@ -1,7 +1,53 @@
+import Icon_space_food_006 from './assets/foodImages/space-food_006.jpg'
+import Icon_space_food_005 from './assets/foodImages/space-food_005.jpg'
+import Icon_space_food_008 from './assets/foodImages/space-food_008.jpg'
+import Icon_space_food_007 from './assets/foodImages/space-food_007.jpg'
+import Icon_space_food_042 from './assets/foodImages/space-food_042.jpg'
+import Icon_IMG_1384a from './assets/foodImages/IMG_1384a.jpg'
+import Icon_IMG_1392a from './assets/foodImages/IMG_1392a.jpg'
+import Icon_70861 from './assets/foodImages/70861.JPG'
+import Icon_70731 from './assets/foodImages/70731.JPG'
+import Icon_photo_032 from './assets/foodImages/photo_032.JPG'
+import Icon_photo_033 from './assets/foodImages/photo_033.JPG'
+import Icon_photo_014 from './assets/foodImages/photo_014.JPG'
+import Icon_photo_024 from './assets/foodImages/photo_024.JPG'
+import Icon_photo_034 from './assets/foodImages/photo_034.JPG'
+import Icon_photo_001 from './assets/foodImages/photo_001.JPG'
+import Icon_photo_002 from './assets/foodImages/photo_002.JPG'
+import Icon_photo_036 from './assets/foodImages/photo_036.JPG'
+import Icon_photo_009 from './assets/foodImages/photo_009.JPG'
+import Icon_photo_013 from './assets/foodImages/photo_013.JPG'
+import Icon_photo_003 from './assets/foodImages/photo_003.JPG'
+import Icon_photo_004 from './assets/foodImages/photo_004.JPG'
+import Icon_photo_023 from './assets/foodImages/photo_023.JPG'
+import Icon_photo_020 from './assets/foodImages/photo_020.JPG'
+import Icon_macherel_misosoup from './assets/foodImages/macherel_misosoup.jpg'
+import Icon_sardine_tomatosauce from './assets/foodImages/sardine_tomatosauce.jpg'
+import Icon_macherel_pike_teriyakisauce from './assets/foodImages/macherel_pike_teriyakisauce.jpg'
+import Icon_photo_017 from './assets/foodImages/photo_017.JPG'
+import Icon_photo_018 from './assets/foodImages/photo_018.JPG'
+import Icon_photo_021 from './assets/foodImages/photo_021.JPG'
+import Icon_photo_022 from './assets/foodImages/photo_022.JPG'
+import Icon_photo_015 from './assets/foodImages/photo_015.JPG'
+import Icon_photo_016 from './assets/foodImages/photo_016.JPG'
+import Icon_photo_019 from './assets/foodImages/photo_019.JPG'
+import Icon_photo_005 from './assets/foodImages/photo_005.JPG'
+import Icon_photo_006 from './assets/foodImages/photo_006.JPG'
+import Icon_photo_007 from './assets/foodImages/photo_007.JPG'
+import Icon_photo_008 from './assets/foodImages/photo_008.JPG'
+import Icon_mayonnaise from './assets/foodImages/mayonnaise.jpg'
+import Icon_photo_035 from './assets/foodImages/photo_035.JPG'
+import Icon_ramen_soysauce from './assets/foodImages/ramen_soysauce.jpg'
+import Icon_ramen_seafood from './assets/foodImages/ramen_seafood.jpg'
+import Icon_ramen_curry from './assets/foodImages/ramen_curry.jpg'
+import Icon_images_photo_012 from './assets/foodImages/photo_012.JPG'
+import Icon_photo_010 from './assets/foodImages/photo_010.JPG'
+import Icon_photo_011 from './assets/foodImages/photo_011.JPG'
+
 export const foodList = [
   {
     id: 1,
-    imageUrl: "./assets/foodImages/space-food_006.jpg",
+    imageUrl: Icon_space_food_006,
     name: "日清スペースチキンラーメン",
     description:  "お湯を注入して食べる",
     contents: "35.7g（1包当り）（麺6.3ｇ×3個）",
@@ -12,7 +58,7 @@ export const foodList = [
   {
 
     id: 2,
-    imageUrl: "./assets/foodImages/space-food_005.jpg",
+    imageUrl: Icon_space_food_005,
     name: "スペース日清焼そばU.F.O.",
     description:  "お湯を注入して食べる",
     contents: "36.9g（1包当り）（麺4.7ｇ×5個）",
@@ -22,7 +68,7 @@ export const foodList = [
   },
   {
     id: 3,
-    imageUrl: "./assets/foodImages/space-food_008.jpg",
+    imageUrl: Icon_space_food_008,
     name: "日清スペースキーマカレーメシ",
     description:  "お湯を注入して食べる",
     contents: "74.8g（1包当り）",
@@ -32,7 +78,7 @@ export const foodList = [
   },
   {
     id: 4,
-    imageUrl: "./assets/foodImages/space-food_007.jpg",
+    imageUrl: Icon_space_food_007,
     name: "日清スペースハヤシメシ",
     description:  "お湯を注入して食べる",
     contents: "76.2g（1包当り）",
@@ -42,7 +88,7 @@ export const foodList = [
   },
   {
     id: 5,
-    imageUrl: "./assets/foodImages/space-food_042.jpg",
+    imageUrl: Icon_space_food_042,
     name: "イベリコ豚とマッシュルームのカレー（レトルトカレー宇宙食）",
     description:  "専用の加温器で温めて食べる",
     contents: "180g（1包当り）",
@@ -52,7 +98,7 @@ export const foodList = [
   },
   {
     id: 6,
-    imageUrl: "./assets/foodImages/IMG_1384a.jpg",
+    imageUrl: Icon_IMG_1384a,
     name: "スペースからあげクン",
     description:  "そのまま食べる",
     contents: "12g（1包あたり）",
@@ -62,7 +108,7 @@ export const foodList = [
   },
   {
     id: 7,
-    imageUrl: "./assets/foodImages/IMG_1392a.jpg",
+    imageUrl: Icon_IMG_1392a,
     name: "森永ミルク生活（宇宙用）",
     description:  "水を注入して飲む",
     contents: "20g（1包あたり）",
@@ -72,7 +118,7 @@ export const foodList = [
   },
   {
     id: 8,
-    imageUrl: "./assets/foodImages/70861.JPG",
+    imageUrl: Icon_70861,
     name: "スペースまるとっとアジ（燻製しお味）",
     description:  "そのまま食べる",
     contents: "50ｇ（1包あたり）",
@@ -82,7 +128,7 @@ export const foodList = [
   },
   {
     id: 9,
-    imageUrl: "./assets/foodImages/70731.JPG",
+    imageUrl: Icon_70731,
     name: "ちりめん山椒",
     description:  "そのまま食べる",
     contents: "10ｇ（1包あたり）",
@@ -92,7 +138,7 @@ export const foodList = [
   },
   {
     id: 10,
-    imageUrl: "./assets/foodImages/photo_032.JPG",
+    imageUrl: Icon_photo_032,
     name: "ホテイやきとり（たれ味）宇宙用",
     description:  "そのまま、または専用の加温器で温めて食べる",
     contents: "96～105g（1包当り）",
@@ -102,7 +148,7 @@ export const foodList = [
   },
   {
     id: 11,
-    imageUrl: "./assets/foodImages/photo_033.JPG",
+    imageUrl: Icon_photo_033,
     name: "ホテイやきとり（柚子こしょう味）宇宙用",
     description:  "そのまま、または専用の加温器で温めて食べる",
     contents: "91～100g（1包当り）",
@@ -112,7 +158,7 @@ export const foodList = [
   },
   {
     id: 12,
-    imageUrl: "./assets/foodImages/photo_014.JPG",
+    imageUrl: Icon_photo_014,
     name: "宇宙食 特濃ミルク8.2",
     description:  "そのまま食べる",
     contents: "21.8g（1包（5個入り）当り）",
@@ -122,7 +168,7 @@ export const foodList = [
   },
   {
     id: 13,
-    imageUrl: "./assets/foodImages/photo_024.JPG",
+    imageUrl: Icon_photo_024,
     name: "味付海苔",
     description:  "そのまま食べる",
     contents: "3.8g（2袋（1袋8切5枚入り）当たり）",
@@ -132,7 +178,7 @@ export const foodList = [
   },
   {
     id: 14,
-    imageUrl: "./assets/foodImages/photo_034.JPG",
+    imageUrl: Icon_photo_034,
     name: "サバ醤油味付け缶詰",
     description:  "そのまま、または専用の加温器で温めて食べる",
     contents: "120±10g",
@@ -142,7 +188,7 @@ export const foodList = [
   },
   {
     id: 15,
-    imageUrl: "./assets/foodImages/photo_001.JPG",
+    imageUrl: Icon_photo_001,
     name: "SPACEビスコ",
     description:  "そのまま食べる",
     contents: "16.5g（2袋（各2枚入り）当たり）",
@@ -152,7 +198,7 @@ export const foodList = [
   },
   {
     id: 16,
-    imageUrl: "./assets/foodImages/photo_002.JPG",
+    imageUrl: Icon_photo_002,
     name: "切り餅",
     description:  "専用の加温器で温めて食べる",
     contents: "83～93g（1包（4個入り）当り）",
@@ -162,7 +208,7 @@ export const foodList = [
   },
   {
     id: 17,
-    imageUrl: "./assets/foodImages/photo_036.JPG",
+    imageUrl: Icon_photo_036,
     name: "キッコーマン宇宙生しょうゆ",
     description:  "つけて食べる",
     contents: "200ml",
@@ -172,7 +218,7 @@ export const foodList = [
   },
   {
     id: 18,
-    imageUrl: "./assets/foodImages/photo_009.JPG",
+    imageUrl: Icon_photo_009,
     name: "亀田の柿の種（宇宙食）",
     description:  "そのまま食べる",
     contents: "35g（1包当り）",
@@ -182,7 +228,7 @@ export const foodList = [
   },
   {
     id: 19,
-    imageUrl: "./assets/foodImages/photo_013.JPG",
+    imageUrl: Icon_photo_013,
     name: "ピーチゼリー",
     description:  "そのまま食べる",
     contents: "63g（1個当り）",
@@ -192,7 +238,7 @@ export const foodList = [
   },
   {
     id: 20,
-    imageUrl: "./assets/foodImages/photo_003.JPG",
+    imageUrl: Icon_photo_003,
     name: "バランス栄養食ブロックタイプ（チーズ味）",
     description:  "そのまま食べる",
     contents: "40g（1包当り）",
@@ -202,7 +248,7 @@ export const foodList = [
   },
   {
     id: 21,
-    imageUrl: "./assets/foodImages/photo_004.JPG",
+    imageUrl: Icon_photo_004,
     name: "イオンドリンク",
     description:  "水を注入して食べる",
     contents: "11.1g（1包当り）",
@@ -212,7 +258,7 @@ export const foodList = [
   },
   {
     id: 22,
-    imageUrl: "./assets/foodImages/photo_023.JPG",
+    imageUrl: Icon_photo_023,
     name: "プルーンエキストラクト",
     description:  "そのまま食べる",
     contents: "60g（1包（2本入り）当たり）",
@@ -222,7 +268,7 @@ export const foodList = [
   },
   {
     id: 23,
-    imageUrl: "./assets/foodImages/photo_020.JPG",
+    imageUrl: Icon_photo_020,
     name: "キシリトールガム（ライムミント）",
     description:  "そのまま食べる",
     contents: "21g（1包（14粒入り）当たり）",
@@ -232,7 +278,7 @@ export const foodList = [
   },
   {
     id: 24,
-    imageUrl: "./assets/foodImages/macherel_misosoup.jpg",
+    imageUrl: Icon_macherel_misosoup,
     name: "サバの味噌煮",
     description:  "そのまま、または専用の加温器で温めて食べる",
     contents: "110g（1包当り）",
@@ -242,7 +288,7 @@ export const foodList = [
   },
   {
     id: 25,
-    imageUrl: "./assets/foodImages/sardine_tomatosauce.jpg",
+    imageUrl: Icon_sardine_tomatosauce,
     name: "イワシのトマト煮",
     description:  "そのまま、または専用の加温器で温めて食べる",
     contents: "100g（1包当り）",
@@ -252,7 +298,7 @@ export const foodList = [
   },
   {
     id: 26,
-    imageUrl: "./assets/foodImages/macherel_pike_teriyakisauce.jpg",
+    imageUrl: Icon_macherel_pike_teriyakisauce,
     name: "サンマの蒲焼き",
     description:  "そのまま、または専用の加温器で温めて食べる",
     contents: "100g（1包当り）",
@@ -262,7 +308,7 @@ export const foodList = [
   },
   {
     id: 27,
-    imageUrl: "./assets/foodImages/images/photo_017.JPG",
+    imageUrl: Icon_photo_017,
     name: "粉末緑茶",
     description:  "お湯を注入して飲む",
     contents: "1.2g（1包当り）",
@@ -272,7 +318,7 @@ export const foodList = [
   },
   {
     id: 28,
-    imageUrl: "./assets/foodImages/photo_018.JPG",
+    imageUrl: Icon_photo_018,
     name: "粉末ウーロン茶",
     description:  "お湯を注入して飲む",
     contents: "2.0g（1包当り）",
@@ -282,7 +328,7 @@ export const foodList = [
   },
   {
     id: 29,
-    imageUrl: "./assets/foodImages/photo_021.JPG",
+    imageUrl: Icon_photo_021,
     name: "羊羹（小倉）",
     description:  "そのまま食べる",
     contents: "62g（1包当り）",
@@ -292,7 +338,7 @@ export const foodList = [
   },
   {
     id: 30,
-    imageUrl: "./assets/foodImages/photo_022.JPG",
+    imageUrl: Icon_photo_022,
     name: "羊羹（栗）",
     description:  "そのまま食べる",
     contents: "62g（1包当り）",
@@ -302,7 +348,7 @@ export const foodList = [
   },
   {
     id: 31,
-    imageUrl: "./assets/foodImages/photo_015.JPG",
+    imageUrl: Icon_photo_015,
     name: "黒飴",
     description:  "そのまま食べる",
     contents: "26.5g（1包（5個入り）当り）",
@@ -312,7 +358,7 @@ export const foodList = [
   },
   {
     id: 32,
-    imageUrl: "./assets/foodImages/photo_016.JPG",
+    imageUrl: Icon_photo_016,
     name: "ミントキャンディー",
     description:  "そのまま食べる",
     contents: "20.5g（1包（5個入り）当り）",
@@ -322,7 +368,7 @@ export const foodList = [
   },
   {
     id: 33,
-    imageUrl: "./assets/foodImages/photo_019.JPG",
+    imageUrl: Icon_photo_019,
     name: "わかめスープ",
     description:  "お湯を注入して食べる",
     contents: "6.4g（1包当り）",
@@ -332,7 +378,7 @@ export const foodList = [
   },
   {
     id: 34,
-    imageUrl: "./assets/foodImages/photo_005.JPG",
+    imageUrl: Icon_photo_005,
     name: "白飯",
     description:  "お湯を注入して食べる",
     contents: "62g（1包当り）（出来上り量：162g）",
@@ -342,7 +388,7 @@ export const foodList = [
   },
   {
     id: 35,
-    imageUrl: "./assets/foodImages/photo_006.JPG",
+    imageUrl: Icon_photo_006,
     name: "赤飯",
     description:  "お湯を注入して食べる",
     contents: "68g（1包当り） （出来上り量：143g）",
@@ -352,7 +398,7 @@ export const foodList = [
   },
   {
     id: 36,
-    imageUrl: "./assets/foodImages/photo_007.JPG",
+    imageUrl: Icon_photo_007,
     name: "山菜おこわ",
     description:  "お湯を注入して食べる",
     contents: "68g（1包当り）（出来上り量：168g）",
@@ -362,7 +408,7 @@ export const foodList = [
   },
   {
     id: 37,
-    imageUrl: "./assets/foodImages/photo_008.JPG",
+    imageUrl: Icon_photo_008,
     name: "おにぎり 鮭",
     description:  "お湯を注入して食べる",
     contents: "50g（1包当り）（出来上り量：125g）",
@@ -372,7 +418,7 @@ export const foodList = [
   },
   {
     id: 38,
-    imageUrl: "./assets/foodImages/mayonnaise.jpg",
+    imageUrl: Icon_mayonnaise,
     name: "マヨネーズ",
     description:  "そのまま食品にかける",
     contents: "50g（1包当り）",
@@ -382,7 +428,7 @@ export const foodList = [
   },
   {
     id: 39,
-    imageUrl: "./assets/foodImages/photo_035.JPG",
+    imageUrl: Icon_photo_035,
     name: "白がゆ",
     description:  "専用の加温器で温めて食べる",
     contents: "250g（1包当り）",
@@ -392,7 +438,7 @@ export const foodList = [
   },
   {
     id: 40,
-    imageUrl: "./assets/foodImages/ramen_soysauce.jpg",
+    imageUrl: Icon_ramen_soysauce,
     name: "日清スペースカップヌードル",
     description:  "お湯を注入して食べる",
     contents: "約35.6g（1包当り）（麺6.3g×3個）",
@@ -402,7 +448,7 @@ export const foodList = [
   },
   {
     id: 41,
-    imageUrl: "./assets/foodImages/ramen_seafood.jpg",
+    imageUrl: Icon_ramen_seafood,
     name: "日清スペースシーフードヌードル",
     description:  "お湯を注入して食べる",
     contents: "約34.9g（1包当り） （麺6.3g×3個）",
@@ -412,7 +458,7 @@ export const foodList = [
   },
   {
     id: 42,
-    imageUrl: "./assets/foodImages/ramen_curry.jpg",
+    imageUrl: Icon_ramen_curry,
     name: "日清スペースカップヌードルカレー",
     description:  "お湯を注入して食べる",
     contents: "約45.6g（1包当り）（麺6.3g×3個）",
@@ -422,7 +468,7 @@ export const foodList = [
   },
   {
     id: 43,
-    imageUrl: "./assets/foodImages/images/photo_012.JPG",
+    imageUrl: Icon_images_photo_012,
     name: "レトルト チキンカレー",
     description:  "専用の加温器で温めて食べる",
     contents: "140g（1包当り）",
@@ -432,7 +478,7 @@ export const foodList = [
   },
   {
     id: 44,
-    imageUrl: "./assets/foodImages/photo_010.JPG",
+    imageUrl: Icon_photo_010,
     name: "レトルト ビーフカレー",
     description:  "専用の加温器で温めて食べる",
     contents: "140g（1包当り）",
@@ -442,7 +488,7 @@ export const foodList = [
   },
   {
     id: 45,
-    imageUrl: "./assets/foodImages/photo_011.JPG",
+    imageUrl: Icon_photo_011,
     name: "レトルト ポークカレー",
     description:  "専用の加温器で温めて食べる",
     contents: "140g（1包当り）",
