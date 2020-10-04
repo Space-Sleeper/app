@@ -1,0 +1,17 @@
+.container{
+    padding: 56px;
+}
+h1{
+    font-size: 32px;
+    color: #596DE4;
+    text-align: left;
+    margin-bottom: 100px;
+}
+h2{
+    font-size: 24px;
+    color: #596DE4;
+    text-align: left;
+}
+.input{
+    margin: 10px;
+}
