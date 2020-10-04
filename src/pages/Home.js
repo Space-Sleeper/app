@@ -7,6 +7,7 @@ import { Button, Dialog, Card } from "ui-neumorphism";
 import { foodList as initFoodList } from "../dummy";
 import PropTypes from "prop-types";
 import { recommendation } from "../utils";
+import { ateHistory } from "../";
 
 import Styles from "./Home.module.css";
 
@@ -52,8 +53,19 @@ export default function HomePage({ canTakeCalorie }) {
       }
       return food;
     });
-
     localStorage.setItem("foodList", JSON.stringify(newFoodList));
+
+    const ateJson = localStorage.getItem("ate");
+    if (!ateJson) {
+      localStorage.setItem("ate", JSON.stringify([id]));
+    } else {
+      const ate = JSON.parse(ateJson);
+      localStorage.setItem(
+        "ate",
+        JSON.stringify([...ate.slice(-1 * (ateHistory - 1)), id])
+      );
+    }
+
     handleCloseDialog();
   };
 

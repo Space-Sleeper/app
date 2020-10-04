@@ -8,6 +8,8 @@ import * as serviceWorker from "./serviceWorker";
 
 const history = createBrowserHistory();
 
+export const ateHistory = 3;
+
 ReactDOM.render(
   <React.StrictMode>
     <Router history={history}>
