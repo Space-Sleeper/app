@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 import { overrideThemeVariables } from "ui-neumorphism";
 import "ui-neumorphism/dist/index.css";
 import Theme from "./theme";
+import { foodList } from "./dummy";
 
 import IconAccount from "./assets/account-icon.svg";
 import IconDish from "./assets/dish-icon.svg";
@@ -22,6 +23,10 @@ function App() {
 
   useEffect(() => {
     overrideThemeVariables(Theme);
+    const foodListJson = localStorage.getItem("foodList");
+    if (!foodListJson) {
+      localStorage.setItem("foodList", JSON.stringify(foodList));
+    }
   }, []);
 
   useLayoutEffect(() => {

@@ -21,6 +21,24 @@ export default function HomePage() {
     setIsDialogVisible(false);
   };
 
+  const handleClickEat = (id) => {
+    const foodListJson = localStorage.getItem("foodList");
+    if (!foodListJson) {
+      localStorage.setItem("foodList", JSON.stringify(foodList));
+    }
+    const foodList = JSON.stringify(foodListJson);
+
+    const newFoodList = foodList.map((food) => {
+      if (food.id === id) {
+        food.stocked -= 1;
+      }
+      return food;
+    });
+
+    localStorage.setItem("foodList", JSON.stringify(newFoodList));
+    handleCloseDialog();
+  };
+
   return (
     <div className={Styles.container}>
       <Margin height={20} />
@@ -89,7 +107,7 @@ export default function HomePage() {
             <Button onClick={handleCloseDialog} color="var(--error)" rounded>
               No
             </Button>
-            <Button onClick={handleCloseDialog} color="var(--primary)" rounded>
+            <Button onClick={handleClickEat} color="var(--primary)" rounded>
               Sure
             </Button>
           </div>
