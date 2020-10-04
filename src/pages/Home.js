@@ -20,6 +20,8 @@ export default function HomePage({ canTakeCalorie }) {
   const alreadyTakenCalorie = JSON.parse(alreadyTakenCalorieJson);
   const recommend = recommendation({ canTakeCalorie, alreadyTakenCalorie });
 
+  console.log(recommend);
+
   const handleOpenDialog = () => {
     setIsDialogVisible(true);
   };
@@ -34,7 +36,7 @@ export default function HomePage({ canTakeCalorie }) {
     if (!foodListJson) {
       localStorage.setItem("foodList", JSON.stringify(initFoodList));
     }
-    const foodList = JSON.stringify(foodListJson);
+    const foodList = JSON.parse(foodListJson);
 
     const newFoodList = foodList.map((food) => {
       if (food.id === id) {
@@ -66,7 +68,7 @@ export default function HomePage({ canTakeCalorie }) {
       <Margin height={40} />
       <section className={Styles.recommendation}>
         <div
-          style={{ backgroundImage: `url(${recommend.data.imgUrl})` }}
+          style={{ backgroundImage: `url(${recommend?.data?.imgUrl || ""})` }}
           className={Styles.Image}
         />
         <div className={Styles.eatButton}>
@@ -133,6 +135,6 @@ export default function HomePage({ canTakeCalorie }) {
   );
 }
 
-HomePage.PropTypes = {
+HomePage.propTypes = {
   canTakeCalorie: PropTypes.number,
 };

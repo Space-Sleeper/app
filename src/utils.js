@@ -1,7 +1,9 @@
 import { foodList } from "./dummy";
 
-export function recommendation({ alreadyTakenCalorie, canTakeCarorie }) {
-  const restCalories = canTakeCarorie - alreadyTakenCalorie;
+export function recommendation({ alreadyTakenCalorie, canTakeCalorie }) {
+  const restCalories = canTakeCalorie - alreadyTakenCalorie.calorie;
+
+  console.log({ alreadyTakenCalorie, canTakeCalorie });
 
   const canEat = foodList.filter(
     ({ nutorition }) => nutorition.calorie < restCalories
