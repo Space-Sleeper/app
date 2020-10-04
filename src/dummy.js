@@ -26,7 +26,7 @@ export const foodList = [
     imgUrl: Imagekakinotane,
     name: "kakinotane",
     id: 5,
-    nutorition: { calorie: 1200, vitaminD: 19 },
+    nutorition: { calorie: 1200, vitaminD: 20 },
     description: "oisiiyo",
   },
 ];

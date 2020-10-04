@@ -28,7 +28,9 @@ function recommendation({ alreadyTakenCalorie, canTakeCarorie }) {
   );
 
   function sortFunction(a, b) {
-    return a.nutorition.calorie < b.nutorition.calorie;
+    if (a.nutorition.vitaminD > b.nutorition.vitaminD) return -1;
+    if (a.nutorition.vitaminD < b.nutorition.vitaminD) return 1;
+    return 0;
   }
 
   return { ok: canEat.length > 0, data: canEat.sort(sortFunction)[0] };
