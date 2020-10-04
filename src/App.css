@@ -9,6 +9,30 @@
   margin: auto;
 }
 
+#wrap_all path {
+  fill: #fbff01;
+  stroke: #f8c926;
+  stroke-width: 2px;
+  animation: svg 5s ease-in both infinite;
+}
+
+@keyframes svg {
+  0% {
+    fill: transparent;
+    stroke-dasharray: 2000px;
+    stroke-dashoffset: 2000px;
+  }
+  20% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    fill: transparent;
+  }
+  50% {
+    fill: #111;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
