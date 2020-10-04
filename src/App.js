@@ -9,12 +9,32 @@ import Footer from "./components/footer";
 import { overrideThemeVariables } from "ui-neumorphism";
 import "ui-neumorphism/dist/index.css";
 import Theme from "./theme";
+import { foodList } from "./dummy";
 
 import IconAccount from "./assets/account-icon.svg";
 import IconDish from "./assets/dish-icon.svg";
 import IconBed from "./assets/bed-icon.svg";
 
 import "./App.css";
+
+const alreadyTakenCalorie = 1000;
+const canTakeCarorie = 2900;
+
+function recommendation({ alreadyTakenCalorie, canTakeCarorie }) {
+  const restCalories = canTakeCarorie - alreadyTakenCalorie;
+
+  const canEat = foodList.filter(
+    ({ nutorition }) => nutorition.calorie < restCalories
+  );
+
+  function sortFunction(a, b) {
+    return a.nutorition.calorie < b.nutorition.calorie;
+  }
+
+  return { ok: canEat.length > 0, data: canEat.sort(sortFunction)[0] };
+}
+
+console.log(recommendation({ alreadyTakenCalorie, canTakeCarorie }));
 
 function App() {
   const history = useHistory();
