@@ -23,9 +23,43 @@ function App() {
 
   useEffect(() => {
     overrideThemeVariables(Theme);
+
     const foodListJson = localStorage.getItem("foodList");
     if (!foodListJson) {
       localStorage.setItem("foodList", JSON.stringify(foodList));
+    }
+
+    const alreadyTakenCalorieJson = localStorage.getItem("alreadyTakenCalorie");
+    if (!alreadyTakenCalorieJson) {
+      localStorage.setItem(
+        "alreadyTakenCalorie",
+        JSON.stringify({
+          calorie: 0,
+          date: new Date(),
+          count: 0,
+        })
+      );
+    } else {
+      const alreadyTakenCalorie = JSON.stringify(alreadyTakenCalorieJson);
+
+      const now = new Date();
+      const last = new Date(alreadyTakenCalorie.date);
+      if (
+        now.getFullYear() === last.getFullYear() &&
+        now.getMonth() === last.getMonth() &&
+        now.getDate() === last.getDate()
+      ) {
+        console.log("ok");
+      } else {
+        localStorage.setItem(
+          "alreadyTakenCalorie",
+          JSON.stringify({
+            calorie: 0,
+            date: new Date(),
+            count: 0,
+          })
+        );
+      }
     }
   }, []);
 

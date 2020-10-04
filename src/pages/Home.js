@@ -3,14 +3,14 @@ import ImageCurry from "../assets/curry.jpg";
 import Margin from "../components/margin";
 import FoodCard from "../components/foodCard";
 import { Button, Dialog, Card } from "ui-neumorphism";
-import { foodList } from "../dummy";
+import { foodList as initFoodList } from "../dummy";
 
 import Styles from "./Home.module.css";
 
 export default function HomePage() {
   const [isDialogVisible, setIsDialogVisible] = useState(false);
 
-  const data = foodList;
+  const data = initFoodList;
   data.length = 2;
 
   const handleOpenDialog = () => {
@@ -24,13 +24,21 @@ export default function HomePage() {
   const handleClickEat = (id) => {
     const foodListJson = localStorage.getItem("foodList");
     if (!foodListJson) {
-      localStorage.setItem("foodList", JSON.stringify(foodList));
+      localStorage.setItem("foodList", JSON.stringify(initFoodList));
     }
     const foodList = JSON.stringify(foodListJson);
 
     const newFoodList = foodList.map((food) => {
       if (food.id === id) {
         food.stocked -= 1;
+        const alreadyTakenCalorieJson = localStorage.getItem(
+          "alreadyTakenCalorie"
+        );
+        const alreadyTakenCalorie = JSON.parse(alreadyTakenCalorieJson);
+        alreadyTakenCalorie.calorie += food.calorie;
+        alreadyTakenCalorie.count += 1;
+
+        localStorage.setItem("foodList", JSON.stringify(alreadyTakenCalorie));
       }
       return food;
     });
