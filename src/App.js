@@ -5,6 +5,7 @@ import HomePage from "./pages/Home";
 import SleepPage from "./pages/Sleep";
 import AccountPage from "./pages/Account";
 import FoodDetailPage from "./pages/FoodDetail";
+import FoodListPage from "./pages/foodList";
 import Footer from "./components/footer";
 import { overrideThemeVariables } from "ui-neumorphism";
 import "ui-neumorphism/dist/index.css";
@@ -90,10 +91,6 @@ function App() {
     history.push(PageRoute.Account);
   };
 
-  // const handleClickFoodDetail = () => {
-  //   history.push(PageRoute.FoodDetail);
-  // };
-
   const ToolBarDatas = [
     { iconUrl: IconDish, onClick: handleClickFood, href: PageRoute.Index },
     { iconUrl: IconBed, onClick: handleClickSleep, href: PageRoute.Sleep },
@@ -119,6 +116,9 @@ function App() {
           </Route>
           <Route exact path={PageRoute.FoodDetail}>
             <FoodDetailPage />
+          </Route>
+          <Route exact path={PageRoute.FoodList}>
+            <FoodListPage />
           </Route>
         </Switch>
         <Footer ToolBarDatas={ToolBarDatas} />

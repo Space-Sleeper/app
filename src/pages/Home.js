@@ -10,10 +10,14 @@ import { recommendation } from "../utils";
 import { ateHistory } from "../";
 import IconCheck from "../assets/Vector.svg";
 import { SvgLoader, SvgProxy } from "react-svgmt";
+import { PageRoute } from "../route";
+import { useHistory } from "react-router-dom";
 
 import Styles from "./Home.module.css";
 
 export default function HomePage({ canTakeCalorie }) {
+  const history = useHistory();
+
   const [isDialogVisible, setIsDialogVisible] = useState(false);
   const [recommend, setRecommend] = useState(
     recommendation({ canTakeCalorie, alreadyTakenCalorie: 0 })
@@ -36,6 +40,10 @@ export default function HomePage({ canTakeCalorie }) {
 
   const handleCloseDialog = () => {
     setIsDialogVisible(false);
+  };
+
+  const handleClickFoodList = () => {
+    history.push(PageRoute.FoodList);
   };
 
   const handleClickEat = () => {
@@ -150,6 +158,7 @@ export default function HomePage({ canTakeCalorie }) {
               fontWeight: 600,
             }}
             rounded
+            onClick={handleClickFoodList}
           >
             More
           </Button>
