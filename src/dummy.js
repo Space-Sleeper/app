@@ -56,7 +56,6 @@ export const foodList = [
     stocked: 20,
   },
   {
-
     id: 2,
     imageUrl: Icon_space_food_005,
     name: "スペース日清焼そばU.F.O.",

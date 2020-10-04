@@ -10,6 +10,9 @@ import Styles from "./foodCard.module.css";
 export default function FoodCard({ imgUrl, name, id }) {
   const history = useHistory();
 
+  const nameArray = name.split("");
+  nameArray.length = 10;
+
   const handleClickDetail = () => {
     history.push(`/foods/${id}`);
   };
@@ -22,7 +25,10 @@ export default function FoodCard({ imgUrl, name, id }) {
         className={Styles.container}
       >
         <div className={Styles.floatingSection}>
-          <p className={Styles.name}>{name}</p>
+          <p className={Styles.name}>
+            {nameArray.join("")}
+            {nameArray.length < name.split("").length ? "..." : ""}
+          </p>
           <div className={Styles.arrow}>
             <SvgLoader path={IconArrow} style={{ width: 32, heigth: 32 }}>
               <SvgProxy />
