@@ -4,11 +4,12 @@ export const foodList = [
   {
     id: 1,
     imageUrl: "./assets/foodImages/space-food_006.jpg",
-    name: ""日清スペースチキンラーメン"",
-    description:  ""お湯を注入して食べる"",
-    contents: ""35.7g（1包当り）（麺6.3ｇ×3個）"",
+    name: "日清スペースチキンラーメン",
+    description:  "お湯を注入して食べる",
+    contents: "35.7g（1包当り）（麺6.3ｇ×3個）",
     nutorition: { calorie: { calorie: 153, vidaminD: 20 },
     maker:  "日清食品ホールディングス株式会社",
+    stocked: 20,
   },
   {
 
@@ -19,6 +20,7 @@ export const foodList = [
     contents: "36.9g（1包当り）（麺4.7ｇ×5個）",
     nutorition: { calorie: 168, vidaminD: 20 },
     maker:  "日清食品ホールディングス株式会社",
+    stocked: 20,
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const foodList = [
     contents: "74.8g（1包当り）",
     nutorition: { calorie: 331, vidaminD: 20 },
     maker:  "日清食品ホールディングス株式会社",
+    stocked: 20,
   },
   {
     id: 4,
@@ -36,7 +39,8 @@ export const foodList = [
     description:  "お湯を注入して食べる",
     contents: "76.2g（1包当り）",
     nutorition: { calorie: 335, vidaminD: 20 },
-    maker:  ""日清食品ホールディングス株式会社"",
+    maker:  "日清食品ホールディングス株式会社",
+    stocked: 20,
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ export const foodList = [
     contents: "180g（1包当り）",
     nutorition: { calorie: 285, vidaminD: 20 },
     maker:  "ハウス食品株式会社",
+    stocked: 20,
   },
   {
     id: 6,
@@ -55,6 +60,7 @@ export const foodList = [
     contents: "12g（1包あたり）",
     nutorition: { calorie: 66.6, vidaminD: 20 },
     maker:  "株式会社ローソン",
+    stocked: 20,
   },
   {
     id: 7,
@@ -64,6 +70,7 @@ export const foodList = [
     contents: "20g（1包あたり）",
     nutorition: { calorie: 95, vidaminD: 20 },
     maker:  "森永乳業株式会社",
+    stocked: 20,
   },
   {
     id: 8,
@@ -73,6 +80,7 @@ export const foodList = [
     contents: "50ｇ（1包あたり）",
     nutorition: { calorie: 95, vidaminD: 20 },
     maker:  "株式会社キシモト",
+    stocked: 20,
   },
   {
     id: 9,
@@ -82,6 +90,7 @@ export const foodList = [
     contents: "10ｇ（1包あたり）",
     nutorition: { calorie: 24, vidaminD: 20 },
     maker:  "宝食品株式会社",
+    stocked: 20,
   },
   {
     id: 10,
@@ -91,6 +100,7 @@ export const foodList = [
     contents: "96～105g（1包当り）",
     nutorition: { calorie: 196, vidaminD: 20 },
     maker:  "株式会社ホテイフーズコーポレーション",
+    stocked: 20,
   },
   {
     id: 11,
@@ -100,6 +110,7 @@ export const foodList = [
     contents: "91～100g（1包当り）",
     nutorition: { calorie: 136, vidaminD: 20 },
     maker:  "株式会社ホテイフーズコーポレーション",
+    stocked: 20,
   },
   {
     id: 12,
@@ -109,6 +120,7 @@ export const foodList = [
     contents: "21.8g（1包（5個入り）当り）",
     nutorition: { calorie: 92, vidaminD: 20 },
     maker:  "味覚糖株式会社",
+    stocked: 20,
   },
   {
     id: 13,
@@ -118,6 +130,7 @@ export const foodList = [
     contents: "3.8g（2袋（1袋8切5枚入り）当たり）",
     nutorition: { calorie: 13.8, vidaminD: 20 },
     maker:  "株式会社山本海苔店",
+    stocked: 20,
   },
   {
     id: 14,
@@ -127,6 +140,7 @@ export const foodList = [
     contents: "120±10g",
     nutorition: { calorie: 238, vidaminD: 20 },
     maker:  "福井県立若狭高等学校",
+    stocked: 20,
   },
   {
     id: 15,
@@ -136,6 +150,7 @@ export const foodList = [
     contents: "16.5g（2袋（各2枚入り）当たり）",
     nutorition: { calorie: 78, vidaminD: 20 },
     maker:  "江崎グリコ株式会社",
+    stocked: 20,
   },
   {
     id: 16,
@@ -145,6 +160,7 @@ export const foodList = [
     contents: "83～93g（1包（4個入り）当り）",
     nutorition: { calorie: 199, vidaminD: 20 },
     maker:  "越後製菓株式会社",
+    stocked: 20,
   },
   {
     id: 17,
@@ -154,6 +170,7 @@ export const foodList = [
     contents: "200ml",
     nutorition: { calorie: 14, vidaminD: 20 },
     maker:  "キッコーマン食品株式会社",
+    stocked: 20,
   },
   {
     id: 18,
@@ -163,6 +180,7 @@ export const foodList = [
     contents: "35g（1包当り）",
     nutorition: { calorie: 168, vidaminD: 20 },
     maker:  "亀田製菓株式会社",
+    stocked: 20,
   },
   {
     id: 19,
@@ -172,6 +190,7 @@ export const foodList = [
     contents: "63g（1個当り）",
     nutorition: { calorie: 49, vidaminD: 20 },
     maker:  "ハウス食品株式会社",
+    stocked: 20,
   },
   {
     id: 20,
@@ -181,6 +200,7 @@ export const foodList = [
     contents: "40g（1包当り）",
     nutorition: { calorie: 200, vidaminD: 20 },
     maker:  "大塚製薬株式会社",
+    stocked: 20,
   },
   {
     id: 21,
@@ -190,6 +210,7 @@ export const foodList = [
     contents: "11.1g（1包当り）",
     nutorition: { calorie: 43.2, vidaminD: 20 },
     maker:  "大塚製薬株式会社",
+    stocked: 20,
   },
   {
     id: 22,
@@ -199,6 +220,7 @@ export const foodList = [
     contents: "60g（1包（2本入り）当たり）",
     nutorition: { calorie: 165.6, vidaminD: 20 },
     maker:  "三基商事株式会社",
+    stocked: 20,
   },
   {
     id: 23,
@@ -208,6 +230,7 @@ export const foodList = [
     contents: "21g（1包（14粒入り）当たり）",
     nutorition: { calorie: 42, vidaminD: 20 },
     maker:  "株式会社ロッテ",
+    stocked: 20,
   },
   {
     id: 24,
@@ -217,6 +240,7 @@ export const foodList = [
     contents: "110g（1包当り）",
     nutorition: { calorie: 325, vidaminD: 20 },
     maker:  "マルハニチロ株式会社",
+    stocked: 20,
   },
   {
     id: 25,
@@ -226,6 +250,7 @@ export const foodList = [
     contents: "100g（1包当り）",
     nutorition: { calorie: 185, vidaminD: 20 },
     maker:  "マルハニチロ株式会社",
+    stocked: 20,
   },
   {
     id: 26,
@@ -235,6 +260,7 @@ export const foodList = [
     contents: "100g（1包当り）",
     nutorition: { calorie: 283, vidaminD: 20 },
     maker:  "マルハニチロ株式会社",
+    stocked: 20,
   },
   {
     id: 27,
@@ -244,6 +270,7 @@ export const foodList = [
     contents: "1.2g（1包当り）",
     nutorition: { calorie: 4, vidaminD: 20 },
     maker:  "三井農林株式会社",
+    stocked: 20,
   },
   {
     id: 28,
@@ -253,6 +280,7 @@ export const foodList = [
     contents: "2.0g（1包当り）",
     nutorition: { calorie: 7, vidaminD: 20 },
     maker:  "三井農林株式会社",
+    stocked: 20,
   },
   {
     id: 29,
@@ -262,6 +290,7 @@ export const foodList = [
     contents: "62g（1包当り）",
     nutorition: { calorie: 173, vidaminD: 20 },
     maker:  "山崎製パン株式会社",
+    stocked: 20,
   },
   {
     id: 30,
@@ -271,6 +300,7 @@ export const foodList = [
     contents: "62g（1包当り）",
     nutorition: { calorie: 175, vidaminD: 20 },
     maker:  "山崎製パン株式会社",
+    stocked: 20,
   },
   {
     id: 31,
@@ -280,6 +310,7 @@ export const foodList = [
     contents: "26.5g（1包（5個入り）当り）",
     nutorition: { calorie: 102, vidaminD: 20 },
     maker:  "ヤマザキビスケット株式会社",
+    stocked: 20,
   },
   {
     id: 32,
@@ -289,6 +320,7 @@ export const foodList = [
     contents: "20.5g（1包（5個入り）当り）",
     nutorition: { calorie: 79, vidaminD: 20 },
     maker:  "ヤマザキビスケット株式会社",
+    stocked: 20,
   },
   {
     id: 33,
@@ -298,6 +330,7 @@ export const foodList = [
     contents: "6.4g（1包当り）",
     nutorition: { calorie: 19, vidaminD: 20 },
     maker:  "理研ビタミン株式会社",
+    stocked: 20,
   },
   {
     id: 34,
@@ -307,6 +340,7 @@ export const foodList = [
     contents: "62g（1包当り）（出来上り量：162g）",
     nutorition: { calorie: 228, vidaminD: 20 },
     maker:  "尾西食品株式会社",
+    stocked: 20,
   },
   {
     id: 35,
@@ -316,6 +350,7 @@ export const foodList = [
     contents: "68g（1包当り） （出来上り量：143g）",
     nutorition: { calorie: 249, vidaminD: 20 },
     maker:  "尾西食品株式会社",
+    stocked: 20,
   },
   {
     id: 36,
@@ -325,6 +360,7 @@ export const foodList = [
     contents: "68g（1包当り）（出来上り量：168g）",
     nutorition: { calorie: 245, vidaminD: 20 },
     maker:  "尾西食品株式会社",
+    stocked: 20,
   },
   {
     id: 37,
@@ -334,6 +370,7 @@ export const foodList = [
     contents: "50g（1包当り）（出来上り量：125g）",
     nutorition: { calorie: 188, vidaminD: 20 },
     maker:  "尾西食品株式会社",
+    stocked: 20,
   },
   {
     id: 38,
@@ -343,6 +380,7 @@ export const foodList = [
     contents: "50g（1包当り）",
     nutorition: { calorie: 350, vidaminD: 20 },
     maker:  "キユーピー株式会社",
+    stocked: 20,
   },
   {
     id: 39,
@@ -352,6 +390,7 @@ export const foodList = [
     contents: "250g（1包当り）",
     nutorition: { calorie: 113, vidaminD: 20 },
     maker:  "キユーピー株式会社",
+    stocked: 20,
   },
   {
     id: 40,
@@ -361,6 +400,7 @@ export const foodList = [
     contents: "約35.6g（1包当り）（麺6.3g×3個）",
     nutorition: { calorie: 160, vidaminD: 20 },
     maker:  "日清食品ホールディングス株式会社",
+    stocked: 20,
   },
   {
     id: 41,
@@ -370,6 +410,7 @@ export const foodList = [
     contents: "約34.9g（1包当り） （麺6.3g×3個）",
     nutorition: { calorie: 147, vidaminD: 20 },
     maker:  "日清食品ホールディングス株式会社",
+    stocked: 20,
   },
   {
     id: 42,
@@ -379,6 +420,7 @@ export const foodList = [
     contents: "約45.6g（1包当り）（麺6.3g×3個）",
     nutorition: { calorie: 227, vidaminD: 20 },
     maker:  "日清食品ホールディングス株式会社",
+    stocked: 20,
   },
   {
     id: 43,
@@ -388,6 +430,7 @@ export const foodList = [
     contents: "140g（1包当り）",
     nutorition: { calorie: 125, vidaminD: 20 },
     maker:  "ハウス食品株式会社",
+    stocked: 20,
   },
   {
     id: 44,
@@ -397,6 +440,7 @@ export const foodList = [
     contents: "140g（1包当り）",
     nutorition: { calorie: 130, vidaminD: 20 },
     maker:  "ハウス食品株式会社",
+    stocked: 20,
   },
   {
     id: 45,
@@ -406,5 +450,6 @@ export const foodList = [
     contents: "140g（1包当り）",
     nutorition: { calorie: 144, vidaminD: 20 },
     maker:  "ハウス食品株式会社",
+    stocked: 20,
   }
 ];
