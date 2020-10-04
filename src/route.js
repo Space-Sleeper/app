@@ -1,7 +1,7 @@
 export const PageRoute = {
   Index: "/",
   Sleep: "/sleep",
-  FoodDetail: "/food-detail",
+  FoodList: "/food-list",
   Account: "/account",
-  Foods: "/foods/:id",
+  FoodDetail: "/foods/:id",
 };
