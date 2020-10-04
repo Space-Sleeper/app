@@ -39,7 +39,7 @@ export default function FoodDetailPage() {
         <div className={Styles.nutorition}>
           <p className={Styles.nutoritionTitle}>Vitamin D</p>
           <p className={Styles.nutoritionDetail}>
-            {data.nutorition.vitaminD}mg
+            {data.nutorition.vitaminD}μg
           </p>
         </div>
       </section>
