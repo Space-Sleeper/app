@@ -1,5 +1,3 @@
-import Imagekakinotane from "./assets/kakinotane.jpg";
-
 export const foodList = [
   {
     id: 1,
