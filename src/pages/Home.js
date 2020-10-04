@@ -28,7 +28,7 @@ export default function HomePage({ canTakeCalorie }) {
     const ateJson = localStorage.getItem("ate");
     const ate = JSON.parse(ateJson || "[]");
     setRecommend(recommendation({ canTakeCalorie, alreadyTakenCalorie, ate }));
-  }, [isDialogVisible]);
+  }, [isDialogVisible, canTakeCalorie]);
 
   const handleOpenDialog = () => {
     setIsDialogVisible(true);
