@@ -59,3 +59,10 @@
 .dialogButton {
   margin: 4px 12px;
 }
+
+.enough {
+  font-size: 20px;
+  color: var(--error);
+  text-align: center;
+  margin: 0;
+}

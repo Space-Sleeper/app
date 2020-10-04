@@ -69,6 +69,7 @@ function App() {
     const weight = localStorage.getItem("weight");
 
     setCanTakeCalorie(calcCalorie({ weight, height, age }));
+    console.log(calcCalorie({ weight, height, age }));
   }, []);
 
   useLayoutEffect(() => {

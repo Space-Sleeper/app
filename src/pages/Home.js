@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import ImageCurry from "../assets/curry.jpg";
 import Margin from "../components/margin";
 import FoodCard from "../components/foodCard";
@@ -8,20 +8,27 @@ import { foodList as initFoodList } from "../dummy";
 import PropTypes from "prop-types";
 import { recommendation } from "../utils";
 import { ateHistory } from "../";
+import IconCheck from "../assets/Vector.svg";
+import { SvgLoader, SvgProxy } from "react-svgmt";
 
 import Styles from "./Home.module.css";
 
 export default function HomePage({ canTakeCalorie }) {
   const [isDialogVisible, setIsDialogVisible] = useState(false);
+  const [recommend, setRecommend] = useState(
+    recommendation({ canTakeCalorie, alreadyTakenCalorie: 0 })
+  );
 
   const data = initFoodList;
   data.length = 2;
 
-  const alreadyTakenCalorieJson = localStorage.getItem("alreadyTakenCalorie");
-  const alreadyTakenCalorie = JSON.parse(alreadyTakenCalorieJson);
-  const recommend = recommendation({ canTakeCalorie, alreadyTakenCalorie });
-
-  console.log(recommend);
+  useEffect(() => {
+    const alreadyTakenCalorieJson = localStorage.getItem("alreadyTakenCalorie");
+    const alreadyTakenCalorie = JSON.parse(alreadyTakenCalorieJson);
+    const ateJson = localStorage.getItem("ate");
+    const ate = JSON.parse(ateJson || "[]");
+    setRecommend(recommendation({ canTakeCalorie, alreadyTakenCalorie, ate }));
+  }, [isDialogVisible]);
 
   const handleOpenDialog = () => {
     setIsDialogVisible(true);
@@ -46,10 +53,13 @@ export default function HomePage({ canTakeCalorie }) {
           "alreadyTakenCalorie"
         );
         const alreadyTakenCalorie = JSON.parse(alreadyTakenCalorieJson);
-        alreadyTakenCalorie.calorie += food.calorie;
-        alreadyTakenCalorie.count += 1;
+        const data = {
+          calorie: alreadyTakenCalorie.calorie + food.calorie,
+          count: alreadyTakenCalorie.count + 1,
+          date: new Date(),
+        };
 
-        localStorage.setItem("foodList", JSON.stringify(alreadyTakenCalorie));
+        localStorage.setItem("foodList", JSON.stringify(data));
       }
       return food;
     });
@@ -79,25 +89,44 @@ export default function HomePage({ canTakeCalorie }) {
       </h1>
       <Margin height={40} />
       <section className={Styles.recommendation}>
-        <div
-          style={{ backgroundImage: `url(${recommend?.data?.imgUrl || ""})` }}
-          className={Styles.Image}
-        />
-        <div className={Styles.eatButton}>
-          <Button
-            color="var(--primary)"
-            style={{
-              fontSize: 20,
-              padding: "0 40px",
-              "--btn-height": "44px",
-              fontWeight: 600,
-            }}
-            onClick={handleOpenDialog}
-            rounded
-          >
-            Eat
-          </Button>
-        </div>
+        {recommend.ok && (
+          <>
+            <div
+              style={{
+                backgroundImage: `url(${recommend?.data?.imgUrl || ""})`,
+              }}
+              className={Styles.Image}
+            />
+            <div className={Styles.eatButton}>
+              <Button
+                color="var(--primary)"
+                style={{
+                  fontSize: 20,
+                  padding: "0 40px",
+                  "--btn-height": "44px",
+                  fontWeight: 600,
+                }}
+                onClick={handleOpenDialog}
+                rounded
+              >
+                Eat
+              </Button>
+            </div>
+          </>
+        )}
+        {!recommend.ok && (
+          <>
+            <h1 className={Styles.enough}>You ate enough today</h1>
+            <Margin height={40} />
+            <SvgLoader
+              path={IconCheck}
+              style={{ width: 60, heigth: 60 }}
+              id="wrap_all"
+            >
+              <SvgProxy />
+            </SvgLoader>
+          </>
+        )}
       </section>
       <Margin height={20} />
       <section>
